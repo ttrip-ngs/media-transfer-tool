@@ -1,0 +1,247 @@
+/* Tauri App Styles */
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.app-header {
+  text-align: center;
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.app-header p {
+  margin: 0.5rem 0 0 0;
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+.app-main {
+  flex: 1;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.file-selection {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.select-button {
+  background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+}
+
+.select-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 107, 107, 0.4);
+}
+
+.file-count {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+.file-list {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  backdrop-filter: blur(10px);
+}
+
+.file-list h3 {
+  margin: 0 0 1rem 0;
+  font-size: 1.3rem;
+}
+
+.file-items {
+  display: grid;
+  gap: 1rem;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.file-item {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 1rem;
+  transition: all 0.3s ease;
+}
+
+.file-item:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateX(5px);
+}
+
+.file-icon {
+  font-size: 2rem;
+  margin-right: 1rem;
+}
+
+.file-info {
+  flex: 1;
+}
+
+.file-name {
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-bottom: 0.2rem;
+}
+
+.file-details {
+  opacity: 0.8;
+  font-size: 0.9rem;
+}
+
+.processing-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.destination-selection,
+.organization-rules {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 1.5rem;
+  backdrop-filter: blur(10px);
+}
+
+.destination-selection h3,
+.organization-rules h3 {
+  margin: 0 0 1rem 0;
+  font-size: 1.3rem;
+}
+
+.destination-options,
+.rule-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.destination-options label,
+.rule-options label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+.destination-options label:hover,
+.rule-options label:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.destination-options input,
+.rule-options input {
+  margin-right: 0.8rem;
+}
+
+.process-controls {
+  grid-column: 1 / -1;
+  text-align: center;
+}
+
+.process-button {
+  background: linear-gradient(45deg, #4ecdc4, #44a08d);
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(78, 205, 196, 0.3);
+  margin-bottom: 1rem;
+}
+
+.process-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(78, 205, 196, 0.4);
+}
+
+.process-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.progress-bar {
+  position: relative;
+  width: 100%;
+  height: 30px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  overflow: hidden;
+  margin-top: 1rem;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(45deg, #4ecdc4, #44a08d);
+  transition: width 0.3s ease;
+  border-radius: 15px;
+}
+
+.progress-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.app-footer {
+  text-align: center;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+.app-footer p {
+  margin: 0;
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  .processing-section {
+    grid-template-columns: 1fr;
+  }
+  
+  .app-header h1 {
+    font-size: 2rem;
+  }
+  
+  .app-main {
+    padding: 1rem;
+  }
+}

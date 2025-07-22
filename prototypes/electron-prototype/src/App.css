@@ -1,0 +1,316 @@
+/* Electron App Styles */
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+  color: white;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+}
+
+.app-header {
+  text-align: center;
+  padding: 1.5rem;
+  background: rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 2.2rem;
+  font-weight: 600;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.app-header p {
+  margin: 0.5rem 0 0 0;
+  font-size: 1rem;
+  opacity: 0.85;
+}
+
+.app-main {
+  flex: 1;
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.file-selection-area {
+  margin-bottom: 2rem;
+}
+
+.drop-zone {
+  border: 2px dashed rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  padding: 3rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.drop-zone:hover {
+  border-color: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.drop-zone-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.drop-icon {
+  font-size: 4rem;
+  opacity: 0.7;
+}
+
+.select-button {
+  background: linear-gradient(45deg, #3498db, #2980b9);
+  border: none;
+  color: white;
+  font-size: 1.1rem;
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+  font-weight: 500;
+}
+
+.select-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(52, 152, 219, 0.4);
+}
+
+.file-count {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.count-badge {
+  background: linear-gradient(45deg, #27ae60, #2ecc71);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.count-empty {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.9rem;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.file-list-section {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.file-list h3 {
+  margin: 0 0 1rem 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.file-items {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.file-item {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  padding: 1rem;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.file-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateX(3px);
+}
+
+.file-type-icon {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+  opacity: 0.8;
+}
+
+.file-details {
+  flex: 1;
+}
+
+.file-name {
+  font-weight: 500;
+  font-size: 0.95rem;
+  margin-bottom: 0.3rem;
+}
+
+.file-meta {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+
+.settings-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.settings-group {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.settings-group h3 {
+  margin: 0 0 1rem 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.radio-group,
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.radio-item,
+.checkbox-item {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 0.5rem 0.8rem;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+.radio-item:hover,
+.checkbox-item:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.radio-item input,
+.checkbox-item input {
+  margin-right: 0.8rem;
+  transform: scale(1.1);
+}
+
+.radio-label,
+.checkbox-label {
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+.action-section {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.process-button {
+  background: linear-gradient(45deg, #27ae60, #2ecc71);
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  padding: 1rem 2rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(39, 174, 96, 0.3);
+  font-weight: 500;
+  min-width: 200px;
+}
+
+.process-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(39, 174, 96, 0.4);
+}
+
+.process-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.progress-container {
+  margin-top: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.progress-bar {
+  flex: 1;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(45deg, #27ae60, #2ecc71);
+  transition: width 0.3s ease;
+  border-radius: 4px;
+}
+
+.progress-text {
+  font-size: 0.9rem;
+  font-weight: 500;
+  min-width: 80px;
+  text-align: right;
+}
+
+.app-footer {
+  text-align: center;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.3);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.app-footer p {
+  margin: 0;
+  opacity: 0.7;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .app-header h1 {
+    font-size: 1.8rem;
+  }
+  
+  .app-main {
+    padding: 1rem;
+  }
+  
+  .drop-zone {
+    padding: 2rem;
+  }
+}

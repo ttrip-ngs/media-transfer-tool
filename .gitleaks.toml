@@ -1,0 +1,67 @@
+# Gitleaks configuration file
+[extend]
+# useDefault will extend the base configuration with the default gitleaks config:
+# https://github.com/gitleaks/gitleaks/blob/master/config/gitleaks.toml
+useDefault = true
+
+[rules]
+  [[rules.rules]]
+    description = "API Key"
+    id = "api-key"
+    regex = '''(?i)api[_-]?key[_-]?[=:]\s*['\"]?([a-zA-Z0-9]{32,})'''
+    secretGroup = 1
+
+  [[rules.rules]]
+    description = "Database connection string"
+    id = "database-connection"
+    regex = '''(?i)database[_-]?url[_-]?[=:]\s*['\"]?([^'\"]+)'''
+    secretGroup = 1
+
+  [[rules.rules]]
+    description = "JWT Secret"
+    id = "jwt-secret"
+    regex = '''(?i)jwt[_-]?secret[_-]?[=:]\s*['\"]?([a-zA-Z0-9]{16,})'''
+    secretGroup = 1
+
+  [[rules.rules]]
+    description = "OAuth Client Secret"
+    id = "oauth-client-secret"
+    regex = '''(?i)client[_-]?secret[_-]?[=:]\s*['\"]?([a-zA-Z0-9]{16,})'''
+    secretGroup = 1
+
+  [[rules.rules]]
+    description = "Private SSH Key"
+    id = "ssh-private-key"
+    regex = '''-----BEGIN [A-Z]+ PRIVATE KEY-----'''
+
+  [[rules.rules]]
+    description = "AWS Access Key"
+    id = "aws-access-key"
+    regex = '''(?i)aws[_-]?access[_-]?key[_-]?id[_-]?[=:]\s*['\"]?([A-Z0-9]{20})'''
+    secretGroup = 1
+
+  [[rules.rules]]
+    description = "AWS Secret Key"
+    id = "aws-secret-key"
+    regex = '''(?i)aws[_-]?secret[_-]?access[_-]?key[_-]?[=:]\s*['\"]?([A-Za-z0-9/+=]{40})'''
+    secretGroup = 1
+
+[allowlist]
+  description = "Allowlist"
+  files = [
+    '''\.md$''',
+    '''\.txt$''',
+    '''\.example$''',
+    '''\.template$''',
+    '''\.sample$''',
+    '''test[_-]?data\.'''
+  ]
+  regexes = [
+    '''(?i)fake[_-]?key''',
+    '''(?i)test[_-]?key''',
+    '''(?i)example[_-]?key''',
+    '''(?i)sample[_-]?key''',
+    '''(?i)placeholder''',
+    '''(?i)dummy[_-]?data''',
+    '''(?i)mock[_-]?data'''
+  ]
