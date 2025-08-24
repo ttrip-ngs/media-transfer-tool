@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir:*)",
+      "mcp__serena__check_onboarding_performed",
+      "mcp__serena__onboarding",
+      "mcp__serena__list_dir",
+      "mcp__serena__write_memory",
+      "Bash(flutter:*)",
+      "Bash(timeout:*)",
+      "mcp__serena__get_symbols_overview",
+      "Bash(start ms-settings:developers)",
+      "mcp__serena__find_symbol",
+      "mcp__serena__replace_regex",
+      "Bash(taskkill:*)",
+      "Bash(powershell:*)",
+      "Bash(git add:*)",
+      "Bash(rm:*)"
+    ],
+    "deny": [],
+    "defaultMode": "acceptEdits"
+  }
+}
